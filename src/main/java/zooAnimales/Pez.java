@@ -25,11 +25,12 @@ public class Pez extends Animal {
 		return listado.size();
 	}
 	
+	@Override
 	public String movimiento() {
 		return "nadar";
 	}
 	
-	public static Pez crearSalmom(String nombre_nuevo, int edad_nueva, String genero_nuevo) {
+	public static Pez crearSalmon(String nombre_nuevo, int edad_nueva, String genero_nuevo) {
 		Pez salmon = new Pez(nombre_nuevo, edad_nueva, "oceano", genero_nuevo, "rojo", 6);
 		salmones++;
 		return salmon;
