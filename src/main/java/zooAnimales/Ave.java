@@ -1,5 +1,5 @@
 package zooAnimales;
-
+import gestion.Zona;
 import java.util.ArrayList;
 
 public class Ave extends Animal {
@@ -10,17 +10,17 @@ public class Ave extends Animal {
 	private String colorPlumas;
 	
 	public Ave() {
-		Ave.getListado().add(this);
+		listado.add(this);
 	}
 	
 	public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
 		super(nombre, edad, habitat, genero);
 		this.setColorPlumas(colorPlumas);
-		Ave.getListado().add(this);
+		listado.add(this);
 	}
 	
-	public int cantidadAves() {
-		return Ave.getListado().size();
+	public static int cantidadAves() {
+		return listado.size();
 	}
 	
 	@Override

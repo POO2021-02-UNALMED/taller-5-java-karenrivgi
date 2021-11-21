@@ -1,5 +1,5 @@
 package zooAnimales;
-
+import gestion.Zona;
 import java.util.ArrayList;
 
 public class Pez extends Animal {
@@ -11,18 +11,18 @@ public class Pez extends Animal {
 	private int cantidadAletas;
 	
 	public Pez() {
-		Pez.getListado().add(this);
+		listado.add(this);
 	}
 
 	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
 		super(nombre, edad, habitat, genero);
 		this.setColorEscamas(colorEscamas);
 		this.setCantidadAletas(cantidadAletas);
-		Pez.getListado().add(this);
+		listado.add(this);
 	}
 
-	public void cantidadpeces() {
-		Pez.getListado().size();
+	public static int cantidadpeces() {
+		return listado.size();
 	}
 	
 	public String movimiento() {

@@ -19,11 +19,10 @@ public class Zona {
 
 	public void agregarAnimales(Animal animal) {
 		getAnimales().add(animal);
-		//añadira un nuevo animal al listado de animales
+		animal.setZona(this);
 	}
 	
 	public int cantidadAnimales() {
-		//retornara la cantidad de animales en la zona.
 		return getAnimales().size();
 	}
 

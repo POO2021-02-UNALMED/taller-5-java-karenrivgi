@@ -1,5 +1,5 @@
 package zooAnimales;
-
+import gestion.Zona;
 import java.util.ArrayList;
 
 public class Anfibio extends Animal {
@@ -11,18 +11,18 @@ public class Anfibio extends Animal {
 	private boolean venenoso;
 	
 	public Anfibio() {
-		Anfibio.getListado().add(this);
+		listado.add(this);
 	}
 	
 	public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
 		super(nombre, edad, habitat, genero);
 		this.setColorPiel(colorPiel);
 		this.setVenenoso(venenoso);
-		Anfibio.getListado().add(this);
+		listado.add(this);
 	}
 	
-	public int cantidadAnfibios() {
-		return Anfibio.getListado().size();
+	public static int cantidadAnfibios() {
+		return listado.size();
 	}
 	
 	public String movimiento() {

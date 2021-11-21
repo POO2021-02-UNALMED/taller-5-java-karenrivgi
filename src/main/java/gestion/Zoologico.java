@@ -19,15 +19,10 @@ public class Zoologico {
 		this.setUbicacion(ubicacion);
 	}
 
-
-	//método encargado de agregar nuevas zonas al zoologico.
-	
 	public void agregarZonas(Zona zona) {
 		getZona().add(zona);
 	}
 
-	//retornara la cantidad de animales total de todas las zonas que tengan relación con el Zoológico
-	
 	public int cantidadTotalAnimales() {
 		
 		int numAnimales = 0;
